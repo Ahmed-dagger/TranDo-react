@@ -1,0 +1,546 @@
+
+.header
+{
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  
+}
+
+.mobMenu
+{
+  display: none;
+}
+
+.headerLogo
+{
+  background: -webkit-linear-gradient(90deg, #4961da, transparent) #1cbec4;
+  background-clip: none;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: x-large;
+  font-weight: 700;
+
+}
+
+.textLogo
+{
+  background: -webkit-linear-gradient(90deg, #4961da, transparent) #1cbec4;
+  background-clip: none;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: xx-large;
+  font-weight: 700;
+}
+
+.textLogo::after
+{
+  background: -webkit-linear-gradient(90deg, #4961da, transparent) #e91e63;
+  content: 'Do';
+  background-clip: none;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: xx-large;
+  font-weight: 700;
+
+}
+
+.headerLogo::after
+{
+  background: -webkit-linear-gradient(90deg, #4961da, transparent) #e91e63;
+  content: 'Do';
+  background-clip: none;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: x-large;
+  font-weight: 700;
+
+}
+.buttons ul
+{
+  float: right;
+  display: flex;
+  list-style: none;
+}
+.buttons ul li
+{
+  padding: 10px;
+  position: relative;
+  bottom: 37px;
+}
+.btn 
+{
+  border: none;
+  width: 80px;
+  height: 26px;
+  border-radius: 30px;
+  background: -webkit-linear-gradient(90deg, #4961da, transparent) #1cbec4;
+  color: black;
+  transition: 0.3s ease;
+  font-weight: 600;
+}
+.btn:hover
+{
+  background: -webkit-linear-gradient(90deg, #4961da8d, transparent) #15777a;
+  color: black;
+ 
+}
+.search
+{
+  display: inline-block;
+  height: 26px;
+  border: none;
+  border-radius: 8px;
+  padding-left: 10px;
+  background-color: rgb(218, 13, 13);
+  color: white;
+  
+}
+.search:focus
+{
+  border: none;
+  outline: none;
+}
+
+.contentList
+{
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin-left: 0;
+  margin-right: 0;
+  
+}
+.contentList li
+{
+  padding: 20px;
+}
+.contentList li label
+{
+  color: white;
+}
+.transBtn
+{
+  width: 90px;
+  height: 40px;
+  border-radius: 30px;
+  border:none;
+  outline: none;
+  background: linear-gradient(90deg, #3f51b5, transparent) #2196f3;
+  cursor: pointer;
+  color: black;
+  font-weight: 600;
+  transition: background-color 0.3s;
+  font-family: inherit;
+  position: relative;
+  left: 210px;
+
+}
+.transBtn:hover
+{
+  
+  background-color: #21f39f;
+  
+}
+
+.transFields
+{
+  display: inline-block;
+  height: 26px;
+  border: none;
+  border-radius: 8px;
+  padding-left: 10px;
+  background-color: rgb(100, 98, 98);
+  color: white;
+}
+
+.transFields::placeholder
+{
+  color: #a5a5a5;
+}
+.transFields:focus
+{
+  border: none;
+  outline: none;
+}
+.select
+{
+  height: 26px;
+  text-align: center;
+  position: relative;
+  left: 24vw;
+  background-color: rgb(31, 31, 31);
+  color: white;
+  border-radius: 12px;
+  height: 30px;
+  
+
+}
+
+.headText
+{
+
+  color: white;
+  display: block;
+  text-align: center;
+  
+  
+}
+.headTextb
+{
+  text-align: center;
+  background: -webkit-linear-gradient(180deg, #4961da, transparent) #1cbec4;
+  background-clip: none;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@media screen and (max-width: 741px) {
+
+  .buttons ul li 
+  {
+    padding: 0px;
+    display: none;
+
+  }
+
+  .mobMenu
+  {
+    border: none;
+    float: right;
+    display: block;
+    position: relative;
+    left: 50vw;
+    border-radius: 50%;
+    width:40px;
+    height: 40px;
+    background: -webkit-linear-gradient(90deg, #4961da, transparent) #1cbec4;
+    background-clip: 0;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: x-large;
+    font-weight: 700;
+    padding-bottom: 5px ;
+    transition: 0.3s;
+  }
+
+  .mobMenu:hover
+  {
+    background: -webkit-linear-gradient(45deg, #4961da, transparent) #21f39f16;
+    background-clip: 0;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .mobNav
+  {
+   display: flex;
+
+  }
+
+  .mobList
+  {
+    background: -webkit-linear-gradient(90deg, #4961da, transparent) #1cbec4;
+    color: black;
+    text-align: center;
+    list-style: none;
+    width: 150px;
+    height: 70px;
+    border-radius:7px ;
+    position: absolute;
+    right: 10vw;
+    bottom: 80vh;
+
+
+  }
+  .mobList li 
+  {
+    padding: 3px;
+    padding-right:30px;
+    position: relative;
+    top: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+  }
+  .mobList li:hover
+  {
+    color: #333;
+  }
+
+  .textLogo
+{
+  background: -webkit-linear-gradient(90deg, #4961da, transparent) #1cbec4;
+  background-clip: none;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: x-large;
+  font-weight: 700;
+}
+
+.textLogo::after
+{
+  background: -webkit-linear-gradient(90deg, #4961da, transparent) #e91e63;
+  content: 'Do';
+  background-clip: none;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: x-large;
+  font-weight: 700;
+
+}
+
+  .headTextTodo
+{
+  text-align: center;
+  color:  #e91e63;
+}
+
+.select
+{
+  position: relative;
+  left: 12vw;
+}
+
+.contentList
+{
+  display: block;
+  flex: column;
+}
+
+
+
+.transBtn
+{
+  position: relative;
+  left: 38vw;
+  
+}
+
+.taskWrapper
+{
+  position: relative;
+  left: 20vw;
+}
+
+.edit
+{
+  display: flex;
+  margin-right: 4vw;
+}
+
+.errorValid
+{
+  text-align: center;
+  color: black;
+  background-color: #e91e63;
+  margin-left: 34px;
+  margin-right: 27px;
+  position: relative;
+  bottom: 10px;
+  border-radius: 5px;
+}
+
+.errorValid::before
+{
+  content: 'ⓧ';
+}
+
+
+
+  
+}
+
+@media screen and (min-width: 1284px)
+{
+  .mobMenu{
+    display: none;
+  }
+
+  .search
+  {
+    position: relative;
+    right: 390px;
+    width: 500px;
+    display: none;
+  }
+
+  .select
+  {
+    position: relative;
+    left: 40vw;
+  }
+  .transBtn
+  {
+    position: relative;
+    left: 46vw;
+  }
+  .contentList li
+  {
+    position: relative;
+    right: 3.5vw;
+  }
+  
+
+  .todoInput
+  {
+    position: relative;
+    left: 13vw;
+  }
+
+  .todoInput:focus
+  {
+    outline: none;
+  }
+
+  .todoSubmit
+  {
+    position: relative;
+    left: 13vw;
+  }
+
+  .taskWrapper
+  {
+    position: relative;
+    left: 17vw;
+  }
+
+  .headTextTodo
+{
+  text-align: center;
+  
+  color:  #e91e63;
+
+}
+
+.headTextwrapper
+{
+  margin: auto;
+  width: 50%;
+}
+
+.headText
+{
+  text-align: center;
+}
+
+.wrapper
+{
+  margin: auto;
+  width: 50%;
+  justify-content: center;
+  align-items: center;
+}
+
+.errorValid
+{
+  text-align: center;
+  color: black;
+  background-color: #e91e63;
+  margin-right: 204px;
+  margin-left: 234px;
+  position: relative;
+  bottom: 10px;
+  border-radius: 5px;
+}
+
+.errorValid::before
+{
+  content: 'ⓧ';
+}
+
+}
+
+
+.tasks
+{
+  color: rgb(18, 16, 16);
+  width: 250px;
+  background-color: #e91e63;
+  font-weight: 700;
+  border-radius: 4px;
+  padding: 10px 5px 12px 22px;
+
+
+}
+
+.trash
+{
+  cursor: pointer;
+  float: right;
+  position: relative;
+  top: 3px;
+  right: 2vw;
+}
+
+.edit
+{
+  cursor: pointer;
+  float: right;
+  position: relative;
+  top: 3px;
+  right: -1vw;
+}
+
+
+.wrapper
+{
+  background-color: rgba(0, 0, 0, 0.578);
+
+  border-radius: 8px;
+
+
+
+  
+  
+}
+
+.todoContent
+{
+  display: block;
+ 
+}
+
+
+.todoForm ul
+{
+  list-style: none;
+  display: flex;
+}
+
+.todoInput
+{
+  height: 40px;
+  width: 250px;
+  text-align: center;
+  border: 2px solid #e91e63;
+  border-right: none;
+  background-color: #380919;
+  color: white;
+  border-radius: 5px 0 0 5px;
+  
+}
+
+.todoInput:focus
+{
+    outline: none;
+}
+
+.todoSubmit
+{
+  height: 40px;
+  position: relative;
+  bottom: 0;
+  border: none;
+  background-color: #e91e63;
+  border-radius: 0 5px 5px 0;
+}
+
+
+.headTextTodo
+{
+  text-align: center;
+  color:  #e91e63;
+  
+}
+
