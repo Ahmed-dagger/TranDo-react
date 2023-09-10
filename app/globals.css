@@ -17,7 +17,8 @@
 }
 
 .footer {
-  background-color: gray;
+ background-color: rgb(29, 29, 29);
+  color: white;
   text-align: center;
   margin-top: auto;
   padding: 8px;
