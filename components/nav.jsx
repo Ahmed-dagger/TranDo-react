@@ -1,6 +1,5 @@
 import React from 'react'
 import styles from '@/app/page.module.css'
-import { Container} from 'react-bootstrap'
 import { useState } from 'react'
 
 
@@ -10,7 +9,7 @@ const Nav = () => {
   
 
   return (
-    <Container>
+   
       <header className='header'>
         
         <div className={styles.mobNav}>
@@ -43,7 +42,7 @@ const Nav = () => {
         </div>
         
       </header>
-    </Container>
+   
     
   )
 }
