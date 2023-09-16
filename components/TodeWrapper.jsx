@@ -5,7 +5,7 @@ import styles from '@/app/page.module.css'
 uuidv4();
 import { useState, useEffect } from 'react'
 import TodoTasks from './TodoTasks';
-import TodoEdit from './todoEdit';
+import TodoEdit from './TodoEdit';
 
 const TodoWrapper = () => {
 
