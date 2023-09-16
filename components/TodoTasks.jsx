@@ -1,11 +1,39 @@
 import React from 'react'
 import styles from '@/app/page.module.css'
 
+import { useState } from 'react';
+
 const TodoTasks = ({task , deleteTodo , editTodo}) => {
+
+  const [isActive, setIsActive] = useState(false);
+
+  const handleClick = (event) => {
+    // 👇️ set to true
+    if (event.currentTarget.style.backgroundColor) {
+      event.currentTarget.style.backgroundColor = null;
+      event.currentTarget.style.color = null;
+      event.currentTarget.style.transition='0.3s';
+      event.currentTarget.style.textDecoration='none'
+
+    } else {
+      event.currentTarget.style.backgroundColor = '#333';
+      event.currentTarget.style.color = 'white';
+      event.currentTarget.style.transition='0.3s';
+      event.currentTarget.style.textDecoration='line-through'
+    }
+  };
   return (
     <div className={styles.taskWrapper}>
 
-        <p onDoubleClick={() => editTodo (task.id)} className={styles.tasks}>
+        <p 
+
+          
+         onClick={handleClick}
+         onDoubleClick={() => editTodo (task.id)} className={styles.tasks}>
+
+        
+
+          
           
         {task.task} 
         

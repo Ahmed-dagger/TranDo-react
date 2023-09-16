@@ -3,14 +3,32 @@ import Todo from './Todo'
 import {v4 as uuidv4} from 'uuid'
 import styles from '@/app/page.module.css'
 uuidv4();
-
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import TodoTasks from './TodoTasks';
 import TodoEdit from './todoEdit';
 
 const TodoWrapper = () => {
 
-    const [todos,setTodos]=useState([]);
+  const data = window.sessionStorage.getItem('Todo');
+
+    const [todos,setTodos]=useState(!data? [] : JSON.parse(data));
+
+    useEffect(() => 
+    {
+
+      
+
+      if ( data !== null) setTodos(JSON.parse(data))
+
+    }, [])
+
+    useEffect(()=>{
+
+      window.sessionStorage.setItem('Todo' , JSON.stringify(todos))
+
+    }, [todos])
+
+
     const addTodo = todo =>
     {
         setTodos([...todos,
@@ -55,7 +73,7 @@ const TodoWrapper = () => {
             <TodoTasks
             deleteTodo= {deleteTodo}
             editTodo={editTodo}
-            task={todo} key={index} />
+            task={todo} key={todo.id} />
           )
 
 

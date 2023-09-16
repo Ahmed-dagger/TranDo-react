@@ -7,7 +7,6 @@ import { useRef , useState } from 'react'
 import ContentMeter from '@/components/ContentMeter';
 import Footer from '@/components/footer';
 import HeaderText from '@/components/HeaderText';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import ContentOunce from '@/components/Contentounce';
 import ContentCelsuis from '@/components/ContentClesuis';
 import Todo from '@/components/Todo';
@@ -22,18 +21,21 @@ import { MDBFooter, MDBContainer, MDBRow, MDBCol, MDBIcon } from 'mdb-react-ui-k
 const Home = () => {
 
   
-  const [selectValue,setSelect]=useState();
+  
 
   console.use
 
   const selectOptions = 
   [
-    {label : 'Kilograms - Pounds' } , 
-    {label : 'Meters - Miels' },
-    {label : 'Kilograms - Ounce' },
-    {label : 'Fahrenhiet - Celsius' }
+    {label : 'Choose what you want to transform', value:'' },
+    {label : 'Kilograms - Pounds' , value: 'Kilograms - Pounds'} , 
+    {label : 'Meters - Miels' , value:'Meters - Miels' },
+    {label : 'Kilograms - Ounce' , value:'Kilograms - Ounce' },
+    {label : 'Fahrenhiet - Celsius', value:'Fahrenhiet - Celsius' }
 
   ]
+
+  const [selectValue,setSelect]=useState(selectOptions[0].value);
 
   const handleSelect = (event) =>
   {
@@ -65,10 +67,9 @@ const Home = () => {
 <br className='hidden'/>
 
 <div>
-<select className={styles.select} name="" id="" onChange={handleSelect}>
-<option value="" disabled selected hidden>Choose who you want to transform</option>
+<select value={selectValue} className={styles.select} name="" id="" onChange={handleSelect}>
 {selectOptions.map(option => (
-  <option> {option.label}</option>
+  <option key={option.value} value={option.value}> {option.label}</option>
 ))}
 </select>
 

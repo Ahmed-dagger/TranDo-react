@@ -460,7 +460,8 @@
   font-weight: 700;
   border-radius: 4px;
   padding: 10px 5px 12px 22px;
-
+  cursor: pointer;
+  text-decoration: none;
 
 }
 
@@ -544,3 +545,15 @@
   
 }
 
+.check
+{
+  accent-color: #333;
+  position: relative;
+  right: 7px;
+  border-radius: 50%;
+}
+
+.check:hover
+{
+  cursor: pointer;
+}
