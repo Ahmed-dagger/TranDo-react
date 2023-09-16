@@ -9,7 +9,11 @@ import TodoEdit from './TodoEdit';
 
 const TodoWrapper = () => {
 
-  const data = window.sessionStorage.getItem('Todo');
+  if (typeof window !== 'undefined') {
+    const data = window.sessionStorage.getItem('Todo');
+  }
+
+  
 
     const [todos,setTodos]=useState(!data? [] : JSON.parse(data));
 
