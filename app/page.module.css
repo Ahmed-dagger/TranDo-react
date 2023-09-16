@@ -317,12 +317,11 @@
   
 }
 
-.taskWrapper
+.tasks
 {
   position: relative;
-  left: 20vw;
+  left: 50px;
 }
-
 .edit
 {
   display: flex;
