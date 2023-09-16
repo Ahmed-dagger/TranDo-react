@@ -8,18 +8,15 @@ import TodoTasks from './TodoTasks';
 import TodoEdit from './TodoEdit';
 
 const TodoWrapper = () => {
-
-  if (typeof window !== 'undefined') {
-    const data = window.sessionStorage.getItem('Todo');
-  }
+  
 
   
 
-    const [todos,setTodos]=useState(!data? [] : JSON.parse(data));
+    const [todos,setTodos]=useState( [] );
 
     useEffect(() => 
     {
-
+      const data = window.sessionStorage.getItem('Todo');
       
 
       if ( data !== null) setTodos(JSON.parse(data))
