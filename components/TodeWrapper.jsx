@@ -9,7 +9,7 @@ import TodoEdit from './TodoEdit';
 
 const TodoWrapper = () => {
 
-  const data = sessionStorage.getItem('Todo');
+  const data = window.sessionStorage.getItem('Todo');
 
     const [todos,setTodos]=useState(!data? [] : JSON.parse(data));
 
@@ -24,7 +24,7 @@ const TodoWrapper = () => {
 
     useEffect(()=>{
 
-      sessionStorage.setItem('Todo' , JSON.stringify(todos))
+      window.sessionStorage.setItem('Todo' , JSON.stringify(todos))
 
     }, [todos])
 
