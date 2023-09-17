@@ -6,7 +6,7 @@ const HeaderText = () => {
     <div>
 
     <h2 className={styles.headText}>Welcome to <span className={styles.textLogo}>Tran</span></h2>
-    <h1 className={styles.headTextb}>Transfrom your daily working uints<br /> here and More...</h1>
+    <h1 className={styles.headTextb}>Transfrom your daily working units<br /> here and More...</h1>
 
     </div>
   )
