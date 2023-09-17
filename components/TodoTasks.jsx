@@ -5,7 +5,7 @@ import { useState } from 'react';
 
 const TodoTasks = ({task , deleteTodo , editTodo}) => {
 
-  const [isActive, setIsActive] = useState(false);
+  
 
   const handleClick = (event) => {
     // 👇️ set to true
@@ -23,18 +23,13 @@ const TodoTasks = ({task , deleteTodo , editTodo}) => {
     }
   };
   return (
-    <div className={styles.taskWrapper}>
+    <div className='taskCenter'>
 
         <p 
 
           
          onClick={handleClick}
          onDoubleClick={() => editTodo (task.id)} className={styles.tasks}>
-
-        
-
-          
-          
         {task.task} 
         
         <img

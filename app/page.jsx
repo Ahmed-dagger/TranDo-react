@@ -66,7 +66,7 @@ const Home = () => {
 
 <br className='hidden'/>
 
-<div>
+<div className='selectCenter'>
 <select value={selectValue} className={styles.select} name="" id="" onChange={handleSelect}>
 {selectOptions.map(option => (
   <option key={option.value} value={option.value}> {option.label}</option>

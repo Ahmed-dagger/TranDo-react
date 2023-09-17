@@ -23,24 +23,32 @@ const Content = () => {
   }
 
   return (
-    <div>
+
+    <>
+
+    <div  className='centerFields'>
       <ul className={styles.contentList}>
         <li>
-          <label >Kilograms</label>&nbsp;&nbsp;
+          <label >Kilograms</label>&nbsp;&nbsp;<br />
           <input onChange={showValue} className={styles.transFields} type="text" placeholder='KiloGrams' ref={inputRef} />
           
         </li>
         <li>
-          <label >Pounds</label>&nbsp;&nbsp;
+          <label >Pounds</label>&nbsp;&nbsp; <br />
           <input className={styles.transFields} type="text" placeholder='Pounds' value={value}  />
       
         </li>
       </ul>
-      
+      </div>
 
-      <button className={styles.transBtn} onClick={showValue}>Trans</button>
+      <div className='btnCenter'>
+        <button className={styles.transBtn} onClick={showValue}>Trans</button>
+      </div>
     
-    </div>
+    </>
+    
+    
+    
   )
 }
 

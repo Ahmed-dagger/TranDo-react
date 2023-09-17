@@ -23,22 +23,24 @@ const ContentOunce = () => {
 
   
   return (
-    <div>
+    <div className='center'>
       <ul className={styles.contentList}>
         <li>
-          <label >Kilograms</label>&nbsp;&nbsp;
-          <input onChange={showValue} className={styles.transFields} type="text" placeholder='Kilograms' ref={inputRef} />
+          <label >Kilograms</label>&nbsp;&nbsp;<br />
+          <input onChange={showValue} className={styles.transFields} type="text" placeholder='KiloGrams' ref={inputRef} />
           
         </li>
         <li>
-          <label >Ounces</label>&nbsp;&nbsp;
-          <input className={styles.transFields} type="text" placeholder='Ounces' value={value}  />
+          <label >Ounces</label>&nbsp;&nbsp; <br />
+          <input className={styles.transFields} type="text" placeholder='Pounds' value={value}  />
       
         </li>
       </ul>
       
 
+      <div className='btnCenter'>
       <button className={styles.transBtn} onClick={showValue}>Trans</button>
+      </div>
     
     </div>
   )

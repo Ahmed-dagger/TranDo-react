@@ -4,13 +4,6 @@
   font-family: sans-serif;
 }
 
-.header
-{
-  border-bottom: solid 2px white;
-  padding: 15px;
-  
-  
-}
 
 .hidden
 {
@@ -24,6 +17,108 @@
   color: white;
   text-align: center;
   margin-top: auto;
-  padding: 8px;
   width:100%;
+  padding: 8px;
+  margin: 40px -10px -7px -10px;
+  min-height: 5%;
+ 
+}
+
+.center
+{
+
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+  
+
+}
+
+.centerFields
+{
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+  
+}
+
+.btnCenter
+{
+  text-align: center; 
+}
+
+.selectCenter
+{
+  
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+  text-align: center;
+}
+
+.todoCenter
+{
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.622);
+  border-radius: 12px;
+}
+
+.headTodoCenter
+{
+  margin: auto;
+  width: 100%;
+  
+}
+
+.formCenter
+{
+  margin: auto;
+  width: 50%;
+ 
+  align-items: center;
+}
+
+.taskCenter
+{
+  margin: auto;
+  width: 50%;
+}
+
+@media screen and (max-width: 410px)
+{
+  .todoCenter
+  {
+    width: 95%;
+  }
+
+  .formCenter
+  {
+    width: 100%;
+    margin: 0 0 0 0;
+    
+  }
+
+  .taskCenter
+{
+  margin: auto;
+  width: 100%;
+}
+
+.selectCenter
+{
+  width: 95%;
+}
+
+.centerFields
+{
+  width: 95%;
+}
+
+.footer
+{
+  margin: 40px -10px -7px -8px;
+}
+
 }

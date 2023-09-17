@@ -51,19 +51,27 @@ const Todo = ({addTodo}) => {
     <div className={styles.todoContent}>
 
       <br />
-        <h1 className={styles.headTextTodo}>ToDo to get things DONE!</h1>
+       <div className='headTodoCenter'>
+       <h1 className={styles.headTextTodo}>ToDo to get things DONE!</h1>
+       </div>
 
         <br />
+
+        <div className='formCenter'>
+
         <form className={styles.todoForm}> 
-          <ul>
-            <li><input className={styles.todoInput} type="text" onChange={handleChange} value={printValue} placeholder='What is your tasks today?'/></li>
-            <li><button type='submit' className={styles.todoSubmit} onClick={handleSubmit}>Add Task</button></li>            
-          </ul>
+         
+            <input className={styles.todoInput} type="text" onChange={handleChange} value={printValue} placeholder='What is your tasks today?'/>
+            <button type='submit' className={styles.todoSubmit} onClick={handleSubmit}>Add Task</button>         
+          
 
           {error &&  <p className={styles.errorValid}>You already have things Todo today please, ADD SOME! </p>}
 
         
         </form>
+
+        </div>
+        
     </div>
 
   

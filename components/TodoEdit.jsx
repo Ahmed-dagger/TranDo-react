@@ -45,18 +45,20 @@ const TodoEdit = ({editTodo, task}) => {
   return (
 
     
-    <div>
-         <form className={styles.todoForm}> 
-          <ul>
-            <li><input className={styles.todoInput} type="text" onChange={handleChange} value={printValue} placeholder='Update your task'/></li>
-            <li><button type='submit' className={styles.todoSubmit} onClick={handleSubmit}>Update</button></li>
-          </ul>
+     <div className='formCenter'>
+
+        <form className={styles.todoForm}> 
+         
+            <input className={styles.todoInput} type="text" onChange={handleChange} value={printValue} placeholder='Update your task'/>
+            <button type='submit' className={styles.todoSubmit} onClick={handleSubmit}>Update</button>         
+          
 
           {error &&  <p className={styles.errorValid}>You already have things Todo today please, ADD SOME! </p>}
-        
+
         
         </form>
-    </div>
+
+        </div>
   )
 }
 

@@ -23,24 +23,25 @@ const ContentCelsuis = () => {
 
   
   return (
-    <div className={styles.main}>
+    <div className='center'>
       <ul className={styles.contentList}>
         <li>
-          <label >Celsuis</label>&nbsp;&nbsp;
-          <input onChange={showValue} className={styles.transFields} type="text" placeholder='Celsuis' ref={inputRef} />
+          <label >Celsuis</label>&nbsp;&nbsp;<br />
+          <input onChange={showValue} className={styles.transFields} type="text" placeholder='KiloGrams' ref={inputRef} />
           
         </li>
         <li>
-          <label >Fahrenhiet</label>&nbsp;&nbsp;
-          <input className={styles.transFields} type="text" placeholder='Fahrenhiet' value={value}  />
+          <label >Fahrenheit</label>&nbsp;&nbsp; <br />
+          <input className={styles.transFields} type="text" placeholder='Pounds' value={value}  />
       
         </li>
       </ul>
       
-      
-      <div className={styles.center}>
-        <button onClick={showValue} className={styles.transBtn} >Trans</button>
+    
+      <div className='btnCenter'>
+      <button className={styles.transBtn} onClick={showValue}>Trans</button>
       </div>
+    
     </div>
   )
 }

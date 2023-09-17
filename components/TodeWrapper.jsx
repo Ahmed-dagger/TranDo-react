@@ -56,7 +56,7 @@ const TodoWrapper = () => {
 
     
   return (
-    <div className={styles.wrapper}>
+    <div className='todoCenter'>
 
         <Todo addTodo={addTodo} />
 

@@ -28,22 +28,24 @@ const ContentMeter = () => {
 
   
   return (
-    <div className={styles.main}>
+    <div className='center'>
       <ul className={styles.contentList}>
         <li>
-          <label >Meters</label>&nbsp;&nbsp;
-          <input onChange={showValue} className={styles.transFields} type="text" placeholder='Meters' ref={inputRef} />
+          <label >Meters</label>&nbsp;&nbsp;<br />
+          <input onChange={showValue} className={styles.transFields} type="text" placeholder='KiloGrams' ref={inputRef} />
           
         </li>
         <li>
-          <label >Miels</label>&nbsp;&nbsp;
-          <input className={styles.transFields} type="text" placeholder='miles' value={value}  />
+          <label >Miles</label>&nbsp;&nbsp; <br />
+          <input className={styles.transFields} type="text" placeholder='Pounds' value={value}  />
       
         </li>
       </ul>
       
 
+      <div className='btnCenter'>
       <button className={styles.transBtn} onClick={showValue}>Trans</button>
+      </div>
     
     </div>
   )

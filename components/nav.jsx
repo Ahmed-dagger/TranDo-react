@@ -19,7 +19,7 @@ const Nav = () => {
         {toggle && (
 
           <ul className={styles.mobList}>
-            <li><Link > </Link></li>
+            <li>About</li>
             <li>Contact</li>
           </ul>
 
