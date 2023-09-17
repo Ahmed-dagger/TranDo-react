@@ -23,11 +23,13 @@ const ContentCelsuis = () => {
 
   
   return (
-    <div className='center'>
+    <>
+
+    <div  className='centerFields'>
       <ul className={styles.contentList}>
         <li>
           <label >Celsuis</label>&nbsp;&nbsp;<br />
-          <input onChange={showValue} className={styles.transFields} type="text" placeholder='KiloGrams' ref={inputRef} />
+          <input onChange={showValue} className={styles.transFields} type="text" placeholder='Celsuis' ref={inputRef} />
           
         </li>
         <li>
@@ -36,13 +38,13 @@ const ContentCelsuis = () => {
       
         </li>
       </ul>
-      
-    
+      </div>
+
       <div className='btnCenter'>
-      <button className={styles.transBtn} onClick={showValue}>Trans</button>
+        <button className={styles.transBtn} onClick={showValue}>Trans</button>
       </div>
     
-    </div>
+    </>
   )
 }
 

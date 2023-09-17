@@ -23,7 +23,9 @@ const ContentOunce = () => {
 
   
   return (
-    <div className='center'>
+    <>
+
+    <div  className='centerFields'>
       <ul className={styles.contentList}>
         <li>
           <label >Kilograms</label>&nbsp;&nbsp;<br />
@@ -36,13 +38,13 @@ const ContentOunce = () => {
       
         </li>
       </ul>
-      
+      </div>
 
       <div className='btnCenter'>
-      <button className={styles.transBtn} onClick={showValue}>Trans</button>
+        <button className={styles.transBtn} onClick={showValue}>Trans</button>
       </div>
     
-    </div>
+    </>
   )
 }
 
