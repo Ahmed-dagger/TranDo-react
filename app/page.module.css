@@ -126,15 +126,9 @@
   font-weight: 600;
   transition: background-color 0.3s;
   font-family: inherit;
- 
+  -webkit-tap-highlight-color: transparent;
   
 
-}
-.transBtn:hover
-{
-  
-  background-color: #21f39f;
-  
 }
 
 .transFields
@@ -292,6 +286,19 @@
   
 }
 
+.transBtn:active
+{
+  
+  background-color: #21f39f;
+  
+}
+
+.transBtn::after
+{
+  -webkit-tap-highlight-color: transparent;
+}
+
+
 
 
 .contentList
@@ -357,7 +364,13 @@
     display: none;
   }
 
+  .transBtn:hover
+{
   
+  background-color: #21f39f;
+  
+}
+
 
   
 
