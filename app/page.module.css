@@ -327,6 +327,17 @@
   content: 'ⓧ';
 }
 
+.todoSubmit
+{
+  height: 45.5px;
+  position: relative;
+  bottom: 0;
+  border: none;
+  background-color: #e91e63;
+  border-radius: 0 5px 5px 0;
+}
+
+
 
 
   
@@ -393,6 +404,18 @@
 {
   content: 'ⓧ';
 }
+
+.todoSubmit
+{
+  height: 45px;
+  position: relative;
+  bottom: 0;
+  border: none;
+  background-color: #e91e63;
+  border-radius: 0 5px 5px 0;
+}
+
+
 
 }
 
@@ -464,16 +487,6 @@
 .todoInput:focus
 {
     outline: none;
-}
-
-.todoSubmit
-{
-  height: 45px;
-  position: relative;
-  bottom: 0;
-  border: none;
-  background-color: #e91e63;
-  border-radius: 0 5px 5px 0;
 }
 
 
