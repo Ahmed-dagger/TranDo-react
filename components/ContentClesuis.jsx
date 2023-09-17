@@ -10,8 +10,9 @@ const ContentCelsuis = () => {
 
   const inputRef = useRef(null);
   let [value , setValue] =useState(0);
+  let [switching, setSwitching] = useState(false);
 
-  function showValue() {
+  function showValueCelsuis() {
     
     setValue(value = (inputRef.current?.value*9/5)+32)
     
@@ -21,28 +22,84 @@ const ContentCelsuis = () => {
 
   }
 
+  const showValueFahrenheit= () =>
+  {
+    setValue(value = (inputRef.current?.value-32)*5/9)
+  }
+
+  const switchValue = () =>
+{
+
+  setSwitching(!switching);
+  
+ 
+}
+
+
   
   return (
     <>
 
-    <div  className='centerFields'>
-      <ul className={styles.contentList}>
-        <li>
-          <label >Celsuis</label>&nbsp;&nbsp;<br />
-          <input onChange={showValue} className={styles.transFields} type="text" placeholder='Celsuis' ref={inputRef} />
-          
-        </li>
-        <li>
-          <label >Fahrenheit</label>&nbsp;&nbsp; <br />
-          <input className={styles.transFields} type="text" placeholder='Pounds' value={value}  />
+    {!switching ? (
+    
+      <> 
+      <div  className='centerFields'>
+    <ul className={styles.contentList}>
+      <li>
+       
+     
+        <label>Celsuis</label>
+        <br />
+        <input onChange={showValueCelsuis} className={styles.transFields} type="text" placeholder='Celsuis' ref={inputRef} />
+        
+      </li>
+      <li>
+    
+        <label >Fahrenheit</label>
+    <br />
+        <input className={styles.transFields} type="text" placeholder='Fahrenheit' value={value}  />
+    
+      </li>
+    </ul>
+    </div>
+    
+    <div className='btnCenter'>
+      <button className={styles.transBtn} onClick={switchValue}>Switch</button>
+    </div>
       
-        </li>
-      </ul>
-      </div>
-
-      <div className='btnCenter'>
-        <button className={styles.transBtn} onClick={showValue}>Trans</button>
-      </div>
+      </>
+    
+    
+    
+    ) : (
+     
+      <> 
+      <div  className='centerFields'>
+    <ul className={styles.contentList}>
+      <li>
+       
+     
+        <label htmlFor="">Fahrenheit</label>
+        <br />
+        <input onChange={showValueFahrenheit} className={styles.transFields} type="text" placeholder='Fahrenheit' ref={inputRef} />
+        
+      </li>
+      <li>
+        <label htmlFor="">Celsuis</label>
+    <br />
+        <input className={styles.transFields} type="text" placeholder='Celsuis' value={value}  />
+    
+      </li>
+    </ul>
+    </div>
+    
+    <div className='btnCenter'>
+      <button className={styles.transBtn} onClick={switchValue}>Switch</button>
+    </div>
+      
+      </>
+    )}
+    
     
     </>
   )

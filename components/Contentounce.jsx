@@ -10,8 +10,9 @@ const ContentOunce = () => {
 
   const inputRef = useRef(null);
   let [value , setValue] =useState(0);
+  let [switching, setSwitching] = useState(false);
 
-  function showValue() {
+  function showValueKilos() {
     
     setValue(value = inputRef.current?.value*35.2739619)
     
@@ -21,28 +22,84 @@ const ContentOunce = () => {
 
   }
 
+  const showValueOunce = () =>
+  {
+    setValue(value = inputRef.current?.value/35.2739619)
+  }
+
+  const switchValue = () =>
+{
+
+  setSwitching(!switching);
+  
+ 
+}
+
+
   
   return (
     <>
 
-    <div  className='centerFields'>
-      <ul className={styles.contentList}>
-        <li>
-          <label >Kilograms</label>&nbsp;&nbsp;<br />
-          <input onChange={showValue} className={styles.transFields} type="text" placeholder='KiloGrams' ref={inputRef} />
-          
-        </li>
-        <li>
-          <label >Ounces</label>&nbsp;&nbsp; <br />
-          <input className={styles.transFields} type="text" placeholder='Pounds' value={value}  />
+    {!switching ? (
+    
+      <> 
+      <div  className='centerFields'>
+    <ul className={styles.contentList}>
+      <li>
+       
+     
+        <label>Kilograms</label>
+        <br />
+        <input onChange={showValueKilos} className={styles.transFields} type="text" placeholder='KiloGrams' ref={inputRef} />
+        
+      </li>
+      <li>
+    
+        <label >Ounces</label>
+    <br />
+        <input className={styles.transFields} type="text" placeholder='Ounces' value={value}  />
+    
+      </li>
+    </ul>
+    </div>
+    
+    <div className='btnCenter'>
+      <button className={styles.transBtn} onClick={switchValue}>Switch</button>
+    </div>
       
-        </li>
-      </ul>
-      </div>
-
-      <div className='btnCenter'>
-        <button className={styles.transBtn} onClick={showValue}>Trans</button>
-      </div>
+      </>
+    
+    
+    
+    ) : (
+     
+      <> 
+      <div  className='centerFields'>
+    <ul className={styles.contentList}>
+      <li>
+       
+     
+        <label htmlFor="">Ounces</label>
+        <br />
+        <input onChange={showValueOunce} className={styles.transFields} type="text" placeholder='Ounces' ref={inputRef} />
+        
+      </li>
+      <li>
+        <label htmlFor="">Kilograms</label>
+    <br />
+        <input className={styles.transFields} type="text" placeholder='Kilograms' value={value}  />
+    
+      </li>
+    </ul>
+    </div>
+    
+    <div className='btnCenter'>
+      <button className={styles.transBtn} onClick={switchValue}>Switch</button>
+    </div>
+      
+      </>
+    )}
+    
     
     </>
   )
