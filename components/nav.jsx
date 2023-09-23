@@ -13,7 +13,7 @@ const Nav = () => {
       <header className='header'>
         
         <div className={styles.mobNav}>
-        <h1 className={styles.headerLogo}>Tran</h1>
+        <img src={'/TranDo.png'} alt="" className={styles.headerLogo} />
         <button onClick={()=> setToggleDropdown (!toggle)} className={styles.mobMenu}>≡</button>
 
         {toggle && (

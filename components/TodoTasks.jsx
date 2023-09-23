@@ -1,15 +1,37 @@
 import React from 'react'
 import styles from '@/app/page.module.css'
 
-import { useState } from 'react';
+import { useState , useEffect} from 'react';
 
 const TodoTasks = ({task , deleteTodo , editTodo}) => {
 
-  
+  const [complete, setComplete] = useState(false)  
+
+  useEffect( () => 
+  {
+    const data= window.localStorage.getItem('Complete')
+    if ( data !== null) setComplete(JSON.parse(data))
+
+  }
+
+
+  , [])
+
+
+  useEffect( () => 
+
+  {
+    window.localStorage.setItem('Complete' , JSON.stringify(complete))
+  }
+
+
+  , [complete])
 
   const handleClick = (event) => {
-    // 👇️ set to true
-    if (event.currentTarget.style.backgroundColor) {
+
+    setComplete(!complete);
+  
+    if (complete) {
       event.currentTarget.style.backgroundColor = null;
       event.currentTarget.style.color = null;
       event.currentTarget.style.transition='0.3s';
@@ -20,6 +42,8 @@ const TodoTasks = ({task , deleteTodo , editTodo}) => {
       event.currentTarget.style.color = 'white';
       event.currentTarget.style.transition='0.3s';
       event.currentTarget.style.textDecoration='line-through'
+      
+
     }
   };
   return (

@@ -6,14 +6,16 @@
 
 .headerLogo
 {
-  background: -webkit-linear-gradient(90deg, #4961da, transparent) #1cbec4;
+ 
   text-align: center;
-  background-clip: none;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-size: x-large;
-  font-weight: 700;
-
+  width: 70px;
+  position: relative;
+  top: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  
+ 
 }
 
 .textLogo
@@ -34,18 +36,6 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: xx-large;
-  font-weight: 700;
-
-}
-
-.headerLogo::after
-{
-  background: -webkit-linear-gradient(90deg, #4961da, transparent) #e91e63;
-  content: 'Do';
-  background-clip: none;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-size: x-large;
   font-weight: 700;
 
 }
@@ -161,6 +151,14 @@
   height: 30px;
 }
 
+.select:focus
+{
+  outline: 0;
+  outline-color: transparent;
+  outline-style: none;
+
+}
+
 .headText
 {
 
@@ -179,7 +177,7 @@
   -webkit-text-fill-color: transparent;
 }
 
-@media screen and (max-width: 432px) {
+@media screen and (max-width: 1283px) {
 
   .buttons ul li 
   {
@@ -445,7 +443,7 @@
   text-decoration: none;
   margin-left: auto;
   margin-right: auto;
-
+  -webkit-tap-highlight-color: transparent;
 }
 
 .trash
@@ -479,6 +477,9 @@
 .todoForm
 {
   display: flex;
+  width: max-content;
+  margin: auto;
+ 
 
 }
 

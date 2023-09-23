@@ -16,7 +16,7 @@ const TodoWrapper = () => {
 
     useEffect(() => 
     {
-      const data = window.sessionStorage.getItem('Todo');
+      const data = window.localStorage.getItem('Todo');
       
 
       if ( data !== null) setTodos(JSON.parse(data))
@@ -25,7 +25,7 @@ const TodoWrapper = () => {
 
     useEffect(()=>{
 
-      window.sessionStorage.setItem('Todo' , JSON.stringify(todos))
+      window.localStorage.setItem('Todo' , JSON.stringify(todos))
 
     }, [todos])
 
