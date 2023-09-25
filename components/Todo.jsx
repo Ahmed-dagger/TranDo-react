@@ -59,7 +59,7 @@ const Todo = ({addTodo}) => {
 
         <div className='formCenter'>
 
-        <form className={styles.todoForm}> 
+        <form className='todoForm'> 
          
             <input className={styles.todoInput} type="text" onChange={handleChange} value={printValue} placeholder='What is your tasks today?'/>
             <button type='submit' className={styles.todoSubmit} onClick={handleSubmit}>Add Task</button>    

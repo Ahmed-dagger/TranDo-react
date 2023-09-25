@@ -65,6 +65,17 @@
   border-radius: 12px;
 }
 
+
+.todoForm
+{
+  display: flex;
+  width: max-content;
+  margin: auto;
+ 
+
+}
+
+
 .headTodoCenter
 {
   margin: auto;
@@ -76,7 +87,6 @@
 {
   margin: auto;
   width: 50%;
- 
   align-items: center;
   
 }
@@ -85,20 +95,20 @@
 {
   margin: auto;
   width: 50%;
+  display: flex;
+
 }
 
 .tasks
 {
   color: rgb(18, 16, 16);
-  width: 250px;
+  width: 60%;
+  border-radius: 4px;
   background-color: #e91e63;
   font-weight: 700;
-  border-radius: 4px;
   padding: 10px 5px 12px 22px;
   cursor: pointer;
   text-decoration: none;
-  margin-left: auto;
-  margin-right: auto;
   -webkit-tap-highlight-color: transparent;
   transition: 0.3s;
 }
@@ -107,21 +117,49 @@
 {
   
   color: white;
-  width: 250px;
+  width: 60%;
+  border-radius: 4px;
   background-color: #333;
   font-weight: 700;
-  border-radius: 4px;
   padding: 10px 5px 12px 22px;
   cursor: pointer;
   text-decoration: none;
-  margin-left: auto;
-  margin-right: auto;
   -webkit-tap-highlight-color: transparent;
   transition: 0.3s;
   text-decoration: line-through;
 
 
 }
+
+.control
+{
+  display: flex;
+  list-style: none;
+  width: max-content;
+  margin-left: 20px;
+  align-items: center;
+  
+
+  
+  
+
+}
+
+.control img
+{
+  background-color: #e91e63;
+  padding: 11px 10px 11px 10px;
+  -webkit-tap-highlight-color: transparent;
+  border-radius: 4px;
+  margin-left: 5px;
+  
+}
+
+.item-exit-active {
+  opacity: 0;
+  transition: opacity 700ms ease-out;
+}
+
 @media screen and (max-width: 1283px)
 {
   .todoCenter
@@ -134,12 +172,41 @@
     width: 100%;
     margin: 0 0 0 0;
     
+
+  }
+  .todoForm
+  {
+    width: 100%;
   }
 
   .taskCenter
 {
   margin: auto;
-  width: 100%;
+  width: 90%;
+  
+}
+
+.tasks
+{
+  position: relative;
+  right: 15px;
+  padding-left: 25px;
+}
+.completed
+{
+  position: relative;
+  right: 15px;
+  padding-left: 25px;
+}
+
+.control
+{
+  display: flex;
+  list-style: none;
+  width: 20%;
+  margin-left: 15px;
+  justify-content: center;
+  align-items: center;
 }
 
 .selectCenter

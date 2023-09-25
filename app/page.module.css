@@ -308,13 +308,6 @@
 
 
 
-
-.edit
-{
-  display: flex;
-  margin-right: 4vw;
-}
-
 .errorValid
 {
   text-align: center;
@@ -370,7 +363,6 @@
 }
 
 
-  
 
   .todoInput:focus
   {
@@ -432,18 +424,15 @@
 {
   cursor: pointer;
   float: right;
-  position: relative;
-  top: 3px;
-  right: 2vw;
+ 
 }
 
 .edit
 {
   cursor: pointer;
   float: right;
-  position: relative;
-  top: 3px;
-  right: -1vw;
+  
+ 
 }
 
 
@@ -455,15 +444,6 @@
 
 }
 
-
-.todoForm
-{
-  display: flex;
-  width: max-content;
-  margin: auto;
- 
-
-}
 
 
 
