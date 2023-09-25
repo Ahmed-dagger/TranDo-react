@@ -404,10 +404,6 @@
   text-align: center;
   color: black;
   background-color: #e91e63;
-  margin-right: 204px;
-  margin-left: 234px;
-  position: relative;
-  bottom: 10px;
   border-radius: 5px;
 }
 
@@ -431,20 +427,6 @@
 }
 
 
-.tasks
-{
-  color: rgb(18, 16, 16);
-  width: 250px;
-  background-color: #e91e63;
-  font-weight: 700;
-  border-radius: 4px;
-  padding: 10px 5px 12px 22px;
-  cursor: pointer;
-  text-decoration: none;
-  margin-left: auto;
-  margin-right: auto;
-  -webkit-tap-highlight-color: transparent;
-}
 
 .trash
 {

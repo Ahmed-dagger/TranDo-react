@@ -33,7 +33,7 @@ const TodoWrapper = () => {
     const addTodo = todo =>
     {
         setTodos([...todos,
-        {id: uuidv4(),task: todo , isEdit: false }])
+        {id: uuidv4(),task: todo , isEdit: false , isComplete: false }])
 
         console.log(todos);
     }
@@ -52,6 +52,12 @@ const TodoWrapper = () => {
     {
       setTodos(todos.map(todo => todo.id === id ? {...todo ,task, isEdit: !todo.isEdit}: todo))
     }
+
+    const Complete= id =>
+    {
+      setTodos(todos.map(todo => todo.id === id ? {...todo , isComplete: !todo.isComplete}: todo))
+    }
+
 
 
     
@@ -74,7 +80,10 @@ const TodoWrapper = () => {
             <TodoTasks
             deleteTodo= {deleteTodo}
             editTodo={editTodo}
-            task={todo} key={todo.id} />
+            Complete={Complete}
+            task={todo} key={todo.id}
+            
+            />
           )
 
 

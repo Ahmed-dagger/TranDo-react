@@ -3,58 +3,19 @@ import styles from '@/app/page.module.css'
 
 import { useState , useEffect} from 'react';
 
-const TodoTasks = ({task , deleteTodo , editTodo}) => {
+const TodoTasks = ({task , deleteTodo , editTodo , Complete}) => {
 
-  const [complete, setComplete] = useState(false)  
-
-  useEffect( () => 
-  {
-    const data= window.localStorage.getItem('Complete')
-    if ( data !== null) setComplete(JSON.parse(data))
-
-  }
-
-
-  , [])
-
-
-  useEffect( () => 
-
-  {
-    window.localStorage.setItem('Complete' , JSON.stringify(complete))
-  }
-
-
-  , [complete])
-
-  const handleClick = (event) => {
-
-    setComplete(!complete);
   
-    if (complete) {
-      event.currentTarget.style.backgroundColor = null;
-      event.currentTarget.style.color = null;
-      event.currentTarget.style.transition='0.3s';
-      event.currentTarget.style.textDecoration='none'
-
-    } else {
-      event.currentTarget.style.backgroundColor = '#333';
-      event.currentTarget.style.color = 'white';
-      event.currentTarget.style.transition='0.3s';
-      event.currentTarget.style.textDecoration='line-through'
-      
-
-    }
-  };
   return (
     <div className='taskCenter'>
 
         <p 
 
           
-         onClick={handleClick}
-         onDoubleClick={() => editTodo (task.id)} className={styles.tasks}>
-        {task.task} 
+         onClick={() => Complete(task.id)}
+         onDoubleClick={() => editTodo (task.id)} className={`${task.isComplete ? 'completed' : "tasks"}`}
+         >
+         {task.task} 
         
         <img
           onClick={() => deleteTodo (task.id)}

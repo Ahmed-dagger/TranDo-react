@@ -62,13 +62,11 @@ const Todo = ({addTodo}) => {
         <form className={styles.todoForm}> 
          
             <input className={styles.todoInput} type="text" onChange={handleChange} value={printValue} placeholder='What is your tasks today?'/>
-            <button type='submit' className={styles.todoSubmit} onClick={handleSubmit}>Add Task</button>         
-          
+            <button type='submit' className={styles.todoSubmit} onClick={handleSubmit}>Add Task</button>    
 
-          {error &&  <p className={styles.errorValid}>You already have things Todo today please, ADD SOME! </p>}
-
-        
         </form>
+
+        {error &&  <p className={styles.errorValid}>You already have things Todo today <br /> please, ADD SOME! </p>}
 
         </div>
         

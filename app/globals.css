@@ -87,6 +87,41 @@
   width: 50%;
 }
 
+.tasks
+{
+  color: rgb(18, 16, 16);
+  width: 250px;
+  background-color: #e91e63;
+  font-weight: 700;
+  border-radius: 4px;
+  padding: 10px 5px 12px 22px;
+  cursor: pointer;
+  text-decoration: none;
+  margin-left: auto;
+  margin-right: auto;
+  -webkit-tap-highlight-color: transparent;
+  transition: 0.3s;
+}
+
+.completed
+{
+  
+  color: white;
+  width: 250px;
+  background-color: #333;
+  font-weight: 700;
+  border-radius: 4px;
+  padding: 10px 5px 12px 22px;
+  cursor: pointer;
+  text-decoration: none;
+  margin-left: auto;
+  margin-right: auto;
+  -webkit-tap-highlight-color: transparent;
+  transition: 0.3s;
+  text-decoration: line-through;
+
+
+}
 @media screen and (max-width: 1283px)
 {
   .todoCenter
